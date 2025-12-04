@@ -10,24 +10,24 @@ export default function Header() {
     <header className="bg-white shadow-sm sticky top-0 z-50">
       <nav className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
-          <Link href="/" className="text-2xl font-bold text-gray-900 hover:text-gray-700 transition-colors">
+          <Link href="/" className="text-2xl font-bold text-teal-600 hover:text-teal-700 transition-colors">
             Ashford Hills
           </Link>
           
           {/* Desktop Menu */}
           <ul className="hidden md:flex space-x-6">
             <li>
-              <Link href="/" className="text-gray-700 hover:text-gray-900 font-medium transition-colors">
+              <Link href="/" className="text-stone-700 hover:text-teal-600 font-medium transition-colors">
                 Home
               </Link>
             </li>
             <li>
-              <Link href="/about" className="text-gray-700 hover:text-gray-900 font-medium transition-colors">
+              <Link href="/about" className="text-stone-700 hover:text-teal-600 font-medium transition-colors">
                 About
               </Link>
             </li>
             <li>
-              <Link href="/contact" className="text-gray-700 hover:text-gray-900 font-medium transition-colors">
+              <Link href="/contact" className="text-stone-700 hover:text-teal-600 font-medium transition-colors">
                 Contact
               </Link>
             </li>
@@ -35,7 +35,7 @@ export default function Header() {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden text-gray-700 hover:text-gray-900 focus:outline-none"
+            className="md:hidden text-stone-700 hover:text-teal-600 focus:outline-none transition-colors"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label="Toggle menu"
           >
@@ -56,7 +56,7 @@ export default function Header() {
               <li>
                 <Link 
                   href="/" 
-                  className="block text-gray-700 hover:text-gray-900 font-medium transition-colors"
+                  className="block text-stone-700 hover:text-teal-600 font-medium transition-colors"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   Home
@@ -65,7 +65,7 @@ export default function Header() {
               <li>
                 <Link 
                   href="/about" 
-                  className="block text-gray-700 hover:text-gray-900 font-medium transition-colors"
+                  className="block text-stone-700 hover:text-teal-600 font-medium transition-colors"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   About
@@ -74,7 +74,7 @@ export default function Header() {
               <li>
                 <Link 
                   href="/contact" 
-                  className="block text-gray-700 hover:text-gray-900 font-medium transition-colors"
+                  className="block text-stone-700 hover:text-teal-600 font-medium transition-colors"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   Contact
