@@ -30,7 +30,7 @@ export default function Home() {
           </p>
           <Link
             href="/about"
-            className="inline-block bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 rounded-lg font-semibold transition-colors shadow-lg w-fit"
+            className="inline-block bg-blue-700 hover:bg-blue-800 text-white px-8 py-4 rounded-lg font-semibold transition-colors shadow-lg w-fit"
           >
             Learn More About Our Neighborhood
           </Link>
@@ -38,27 +38,27 @@ export default function Home() {
       </section>
 
       {/* Quick Info Section */}
-      <section className="py-20 bg-gray-50">
+      <section className="py-20 bg-slate-50">
         <div className="container mx-auto px-4">
           <h2 className="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-900 leading-tight">About Ashford Hills</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div className="bg-white p-8 rounded-lg shadow-md">
+            <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
               <h3 className="text-xl md:text-2xl font-semibold mb-4 text-gray-900 leading-tight">32 Beautiful Homes</h3>
-              <p className="text-base md:text-lg text-gray-600 leading-relaxed">
+              <p className="text-base md:text-lg text-slate-600 leading-relaxed">
                 Our neighborhood consists of 32 unique homes developed in the early to mid 1990s, 
                 each with mature trees and beautiful landscaping.
               </p>
             </div>
-            <div className="bg-white p-8 rounded-lg shadow-md">
+            <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
               <h3 className="text-xl md:text-2xl font-semibold mb-4 text-gray-900 leading-tight">Prime Location</h3>
-              <p className="text-base md:text-lg text-gray-600 leading-relaxed">
+              <p className="text-base md:text-lg text-slate-600 leading-relaxed">
                 Located near Ironwood and Adams Road in Granger, Indiana. Close to shopping, 
                 restaurants, and excellent schools.
               </p>
             </div>
-            <div className="bg-white p-8 rounded-lg shadow-md">
+            <div className="bg-white p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
               <h3 className="text-xl md:text-2xl font-semibold mb-4 text-gray-900 leading-tight">Active HOA</h3>
-              <p className="text-base md:text-lg text-gray-600 leading-relaxed">
+              <p className="text-base md:text-lg text-slate-600 leading-relaxed">
                 Our Homeowners Association works to maintain the integrity and beauty of 
                 our neighborhood. Annual dues: $300 (as of 2023).
               </p>
@@ -74,22 +74,72 @@ export default function Home() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             <div>
               <h3 className="text-xl md:text-2xl font-semibold mb-4 text-gray-900 leading-tight">Location Benefits</h3>
-              <ul className="space-y-3 text-base md:text-lg text-gray-600 leading-relaxed">
-                <li>• Close to University of Notre Dame</li>
-                <li>• Near quality schools and parks</li>
-                <li>• Easy access to shopping and dining</li>
-                <li>• Short drive to Michigan border</li>
-                <li>• Convenient to 80/90 Toll Road</li>
+              <ul className="space-y-3 text-base md:text-lg text-slate-600 leading-relaxed">
+                <li className="flex items-start gap-3">
+                  <svg className="w-5 h-5 text-cyan-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                  </svg>
+                  <span>Close to University of Notre Dame</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <svg className="w-5 h-5 text-cyan-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                  </svg>
+                  <span>Near quality schools and parks</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <svg className="w-5 h-5 text-cyan-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                  </svg>
+                  <span>Easy access to shopping and dining</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <svg className="w-5 h-5 text-cyan-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                  </svg>
+                  <span>Short drive to Michigan border</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <svg className="w-5 h-5 text-cyan-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                  </svg>
+                  <span>Convenient to 80/90 Toll Road</span>
+                </li>
               </ul>
             </div>
             <div>
               <h3 className="text-xl md:text-2xl font-semibold mb-4 text-gray-900 leading-tight">Community Features</h3>
-              <ul className="space-y-3 text-base md:text-lg text-gray-600 leading-relaxed">
-                <li>• Well-maintained properties</li>
-                <li>• Mature trees and foliage</li>
-                <li>• Active homeowners association</li>
-                <li>• Friendly, welcoming community</li>
-                <li>• Well water & septic sewer systems</li>
+              <ul className="space-y-3 text-base md:text-lg text-slate-600 leading-relaxed">
+                <li className="flex items-start gap-3">
+                  <svg className="w-5 h-5 text-cyan-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                  </svg>
+                  <span>Well-maintained properties</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <svg className="w-5 h-5 text-cyan-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                  </svg>
+                  <span>Mature trees and foliage</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <svg className="w-5 h-5 text-cyan-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                  </svg>
+                  <span>Active homeowners association</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <svg className="w-5 h-5 text-cyan-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                  </svg>
+                  <span>Friendly, welcoming community</span>
+                </li>
+                <li className="flex items-start gap-3">
+                  <svg className="w-5 h-5 text-cyan-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                  </svg>
+                  <span>Well water & septic sewer systems</span>
+                </li>
               </ul>
             </div>
           </div>
@@ -97,13 +147,13 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-20 bg-blue-600 text-white">
+      <section className="py-20 bg-blue-700 text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4 leading-tight">Have Questions?</h2>
           <p className="text-lg md:text-xl mb-8 leading-relaxed">Get in touch with the Ashford Hills HOA</p>
           <Link
             href="/contact"
-            className="inline-block bg-white text-blue-600 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors shadow-lg"
+            className="inline-block bg-white text-blue-700 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors shadow-lg"
           >
             Contact Us
           </Link>

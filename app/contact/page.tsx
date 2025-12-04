@@ -27,8 +27,8 @@ export default function Contact() {
               <div className="space-y-6">
                 <div>
                   <h3 className="text-xl md:text-2xl font-semibold mb-3 text-gray-900 leading-tight">Email</h3>
-                  <p className="text-base md:text-lg text-gray-700 leading-relaxed">
-                    <a href="mailto:info@ashfordhills.org" className="text-blue-600 hover:text-blue-800">
+                  <p className="text-base md:text-lg text-slate-700 leading-relaxed">
+                    <a href="mailto:info@ashfordhills.org" className="text-blue-700 hover:text-cyan-500 transition-colors">
                       info@ashfordhills.org
                     </a>
                   </p>
@@ -36,7 +36,7 @@ export default function Contact() {
 
                 <div>
                   <h3 className="text-xl md:text-2xl font-semibold mb-3 text-gray-900 leading-tight">Location</h3>
-                  <p className="text-base md:text-lg text-gray-700 leading-relaxed">
+                  <p className="text-base md:text-lg text-slate-700 leading-relaxed">
                     Ashford Hills HOA<br />
                     Granger, Indiana<br />
                     Near Ironwood and Adams Road
@@ -45,15 +45,15 @@ export default function Contact() {
 
                 <div>
                   <h3 className="text-xl md:text-2xl font-semibold mb-3 text-gray-900 leading-tight">HOA Dues</h3>
-                  <p className="text-base md:text-lg text-gray-700 leading-relaxed">
+                  <p className="text-base md:text-lg text-slate-700 leading-relaxed">
                     Annual dues: $300.00 (as of 2023)<br />
-                    <span className="text-sm text-gray-600">Subject to change</span>
+                    <span className="text-sm text-slate-600">Subject to change</span>
                   </p>
                 </div>
 
-                <div className="bg-blue-50 p-8 rounded-lg">
+                <div className="bg-blue-50 p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-1">
                   <h3 className="text-xl md:text-2xl font-semibold mb-3 text-gray-900 leading-tight">Questions?</h3>
-                  <p className="text-base md:text-lg text-gray-700 leading-relaxed">
+                  <p className="text-base md:text-lg text-slate-700 leading-relaxed">
                     If you have questions about the neighborhood, HOA policies, or need assistance, 
                     please don't hesitate to reach out. We're here to help maintain our wonderful 
                     community.
