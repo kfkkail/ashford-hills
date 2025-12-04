@@ -1,19 +1,33 @@
 import Link from 'next/link';
+import Image from 'next/image';
 
 export default function Home() {
   return (
     <div className="bg-white">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-blue-600 to-blue-800 text-white py-20">
-        <div className="container mx-auto px-4">
-          <h1 className="text-5xl font-bold mb-4">Welcome to Ashford Hills</h1>
-          <p className="text-xl mb-8">A beautiful residential neighborhood in Granger, Indiana</p>
-          <Link
-            href="/about"
-            className="inline-block bg-white text-blue-600 px-6 py-3 rounded-md font-semibold hover:bg-gray-100 transition-colors"
-          >
-            Learn More About Our Neighborhood
-          </Link>
+      <section className="relative h-[600px] md:h-[700px] overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/hero.png"
+            alt="Ashford Hills neighborhood with beautiful autumn foliage"
+            fill
+            className="object-cover"
+            priority
+            sizes="100vw"
+          />
+          {/* Overlay for text readability */}
+          <div className="absolute inset-0 bg-black/40"></div>
+        </div>
+        
+        {/* Hero Content */}
+        <div className="relative z-10 container mx-auto px-4 h-full flex flex-col justify-center text-white">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 drop-shadow-lg">
+            Welcome to Ashford Hills
+          </h1>
+          <p className="text-xl md:text-2xl mb-8 drop-shadow-md max-w-2xl">
+            A beautiful residential neighborhood in Granger, Indiana
+          </p>
         </div>
       </section>
 
