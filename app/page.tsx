@@ -94,8 +94,8 @@ export default function Home() {
               <p className="text-[1.125rem] text-stone-600 leading-relaxed">
                 Our neighborhood consists of 32 unique homes developed in the early to mid 1990s, 
                 each with mature trees and beautiful landscaping that create a picturesque setting. 
-                Larger-than-average lots provide extra breathing room, and covenants call for two-thirds to 
-                three-quarters brick exteriors—a standard only one home doesn't follow—keeping the streetscape cohesive.
+                Expect generous lots and classic all-brick exteriors that give every street an elevated,
+                cohesive look.
               </p>
             </div>
             
