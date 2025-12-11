@@ -79,7 +79,7 @@ export default function Home() {
               Why Choose <span className="text-teal-600">Ashford Hills</span>?
             </h2>
             <p className="text-xl text-stone-600 max-w-2xl mx-auto leading-relaxed">
-              Discover what makes our neighborhood a special place to call home
+              Part of the Knollwood community in Granger, Ashford Hills pairs quiet streets with easy access to everything nearby.
             </p>
           </div>
           
@@ -90,12 +90,9 @@ export default function Home() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
                 </svg>
               </div>
-              <h3 className="text-[1.5rem] font-bold mb-4 text-stone-900 leading-tight">32 Beautiful Homes</h3>
+              <h3 className="text-[1.5rem] font-bold mb-4 text-stone-900 leading-tight">Thoughtful Architecture</h3>
               <p className="text-[1.125rem] text-stone-600 leading-relaxed">
-                Our neighborhood consists of 32 unique homes developed in the early to mid 1990s, 
-                each with mature trees and beautiful landscaping that create a picturesque setting. 
-                Expect generous lots and classic all-brick exteriors that give every street an elevated,
-                cohesive look.
+                Thirty-two custom homes, built in the early to mid 1990s, sit on larger lots with mature trees, all-brick exteriors, and cohesive landscaping that keep curb appeal timeless.
               </p>
             </div>
             
@@ -139,9 +136,7 @@ export default function Home() {
                 Neighborhood <span className="text-teal-600">Highlights</span>
               </h2>
               <p className="text-[1.125rem] text-stone-600 mb-8 leading-relaxed">
-                Everything you need for a wonderful lifestyle is right here in Ashford Hills. 
-                From excellent schools to world-class entertainment, our location offers the perfect 
-                balance of suburban tranquility and urban convenience.
+                Everything you need for a wonderful lifestyle is right here in Ashford Hills, from Notre Dame game days to quiet cul-de-sacs. We’re minutes from Mishawaka, South Bend, and the Michigan border while still feeling tucked away.
               </p>
               <div className="space-y-4">
                 <div className="flex items-start gap-4">
@@ -149,13 +144,12 @@ export default function Home() {
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                   </svg>
                   <div>
-                    <h3 className="text-xl font-semibold mb-2 text-stone-900">Location Benefits</h3>
+                    <h3 className="text-xl font-semibold mb-2 text-stone-900">Lifestyle & Amenities</h3>
                     <ul className="space-y-2 text-[1.125rem] text-stone-600">
                       <li>• Close to University of Notre Dame</li>
-                      <li>• Near quality schools and parks</li>
-                      <li>• Easy access to shopping and dining</li>
-                      <li>• Short drive to Michigan border</li>
-                      <li>• Convenient to 80/90 Toll Road</li>
+                      <li>• Knollwood Country Club & golf</li>
+                      <li>• University Park Mall & Grape Road dining</li>
+                      <li>• Ironwood Road restaurants & local parks</li>
                     </ul>
                   </div>
                 </div>
@@ -164,13 +158,26 @@ export default function Home() {
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                   </svg>
                   <div>
-                    <h3 className="text-xl font-semibold mb-2 text-stone-900">Community Features</h3>
+                    <h3 className="text-xl font-semibold mb-2 text-stone-900">Connected & Convenient</h3>
                     <ul className="space-y-2 text-[1.125rem] text-stone-600">
-                      <li>• Well-maintained properties</li>
-                      <li>• Mature trees and foliage</li>
-                      <li>• Active homeowners association</li>
-                      <li>• Friendly, welcoming community</li>
-                      <li>• Well water & septic sewer systems</li>
+                      <li>• 5–10 minute drive to Mishawaka</li>
+                      <li>• Easy access to 80/90 Toll Road</li>
+                      <li>• Short hop to South Bend & Elkhart</li>
+                      <li>• Close to the Michigan border</li>
+                    </ul>
+                  </div>
+                </div>
+                <div className="flex items-start gap-4">
+                  <svg className="w-6 h-6 text-emerald-500 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                    <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
+                  </svg>
+                  <div>
+                    <h3 className="text-xl font-semibold mb-2 text-stone-900">Schools & Services</h3>
+                    <ul className="space-y-2 text-[1.125rem] text-stone-600">
+                      <li>• South Bend Community School District</li>
+                      <li>• Swanson Elementary, Clay Middle & High</li>
+                      <li>• Well water & septic utilities</li>
+                      <li>• Active HOA keeping properties pristine</li>
                     </ul>
                   </div>
                 </div>
@@ -209,6 +216,10 @@ export default function Home() {
                     <div className="flex justify-between">
                       <span className="text-stone-600">Price Range:</span>
                       <span className="font-semibold text-stone-900">$400k - $600k</span>
+                    </div>
+                    <div className="flex justify-between">
+                      <span className="text-stone-600">Schools:</span>
+                      <span className="font-semibold text-stone-900 text-right">Swanson (Elem)<br />Clay (Middle & High)</span>
                     </div>
                   </div>
                 </div>
