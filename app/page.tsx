@@ -214,10 +214,6 @@ export default function Home() {
                       <span className="font-semibold text-stone-900">Early 1990s</span>
                     </div>
                     <div className="flex justify-between">
-                      <span className="text-stone-600">Price Range:</span>
-                      <span className="font-semibold text-stone-900">$600k - $1M</span>
-                    </div>
-                    <div className="flex justify-between">
                       <span className="text-stone-600">Schools:</span>
                       <span className="font-semibold text-stone-900 text-right">Swanson (Elem)<br />Clay (Middle & High)</span>
                     </div>
