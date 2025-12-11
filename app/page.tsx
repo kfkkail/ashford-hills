@@ -24,7 +24,7 @@ export default function Home() {
         {/* Hero Content - Left Aligned */}
         <div className="relative z-10 container mx-auto px-4 lg:px-8 h-full flex flex-col justify-start md:justify-center text-white py-16">
           <div className="max-w-full sm:max-w-[80%] md:max-w-[60%] lg:max-w-[45%]">
-            <h1 className="text-[2.75rem] sm:text-[3.75rem] md:text-[4.75rem] lg:text-[5.75rem] font-bold mb-6 leading-tight tracking-tight drop-shadow-2xl">
+            <h1 className="text-[clamp(1.65rem,7vw,3.25rem)] sm:text-[clamp(2.25rem,6vw,4rem)] md:text-[clamp(3rem,5vw,5rem)] lg:text-[5.5rem] font-bold mb-6 leading-tight tracking-tight drop-shadow-2xl whitespace-nowrap">
               Discover Ashford Hills
             </h1>
             <p className="text-xl md:text-2xl mb-10 drop-shadow-lg leading-relaxed text-gray-100">
