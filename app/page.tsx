@@ -215,7 +215,7 @@ export default function Home() {
                     </div>
                     <div className="flex justify-between">
                       <span className="text-stone-600">Price Range:</span>
-                      <span className="font-semibold text-stone-900">$400k - $600k</span>
+                      <span className="font-semibold text-stone-900">$600k - $1M</span>
                     </div>
                     <div className="flex justify-between">
                       <span className="text-stone-600">Schools:</span>
