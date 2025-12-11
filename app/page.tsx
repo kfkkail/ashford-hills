@@ -5,7 +5,7 @@ export default function Home() {
   return (
     <div className="bg-white">
       {/* Hero Section - Redesigned */}
-      <section className="relative h-[80vh] min-h-[600px] overflow-hidden">
+      <section className="relative min-h-[600px] sm:min-h-[70vh] lg:min-h-[80vh] overflow-hidden">
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <Image
@@ -22,15 +22,15 @@ export default function Home() {
         </div>
         
         {/* Hero Content - Left Aligned */}
-        <div className="relative z-10 container mx-auto px-4 lg:px-8 h-full flex flex-col justify-center text-white">
-          <div className="max-w-[50%] md:max-w-[45%]">
-            <h1 className="text-[4.5rem] md:text-[5.5rem] lg:text-[6.5rem] font-bold mb-6 leading-[1.1] drop-shadow-2xl">
-              Welcome to Ashford Hills
+        <div className="relative z-10 container mx-auto px-4 lg:px-8 h-full flex flex-col justify-start md:justify-center text-white py-16">
+          <div className="max-w-full sm:max-w-[80%] md:max-w-[60%] lg:max-w-[45%]">
+            <h1 className="text-[clamp(1.65rem,7vw,3.25rem)] sm:text-[clamp(2.25rem,6vw,4rem)] md:text-[clamp(3rem,5vw,5rem)] lg:text-[5.5rem] font-bold mb-6 leading-tight tracking-tight drop-shadow-2xl whitespace-nowrap">
+              Discover Ashford Hills
             </h1>
             <p className="text-xl md:text-2xl mb-10 drop-shadow-lg leading-relaxed text-gray-100">
               A beautiful residential neighborhood in Granger, Indiana where community and excellence meet
             </p>
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row gap-4 pb-6 sm:pb-0">
               <Link
                 href="/about"
                 className="inline-flex items-center justify-center px-8 py-4 bg-teal-600 hover:bg-teal-700 text-white font-semibold rounded-lg transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:-translate-y-1"
