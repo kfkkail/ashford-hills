@@ -22,11 +22,6 @@ export default function Header() {
               </Link>
             </li>
             <li>
-              <Link href="/about" className="text-stone-700 hover:text-teal-600 font-medium transition-colors">
-                About
-              </Link>
-            </li>
-            <li>
               <Link href="/contact" className="text-stone-700 hover:text-teal-600 font-medium transition-colors">
                 Contact
               </Link>
@@ -60,15 +55,6 @@ export default function Header() {
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   Home
-                </Link>
-              </li>
-              <li>
-                <Link 
-                  href="/about" 
-                  className="block text-stone-700 hover:text-teal-600 font-medium transition-colors"
-                  onClick={() => setMobileMenuOpen(false)}
-                >
-                  About
                 </Link>
               </li>
               <li>
