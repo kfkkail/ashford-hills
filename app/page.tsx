@@ -25,7 +25,7 @@ export default function Home() {
         <div className="relative z-10 container mx-auto px-4 lg:px-8 h-full flex flex-col justify-start md:justify-center text-white py-16">
           <div className="max-w-full sm:max-w-[80%] md:max-w-[60%] lg:max-w-[45%]">
             <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-[6.5rem] font-bold mb-6 leading-[1.1] drop-shadow-2xl">
-              Welcome to Ashford Hills
+              Discover Ashford Hills
             </h1>
             <p className="text-xl md:text-2xl mb-10 drop-shadow-lg leading-relaxed text-gray-100">
               A beautiful residential neighborhood in Granger, Indiana where community and excellence meet
