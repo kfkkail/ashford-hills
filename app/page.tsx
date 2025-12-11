@@ -119,7 +119,7 @@ export default function Home() {
               <h3 className="text-[1.5rem] font-bold mb-4 text-stone-900 leading-tight">Active HOA</h3>
               <p className="text-[1.125rem] text-stone-600 leading-relaxed">
                 Our Homeowners Association works diligently to maintain the integrity and beauty of 
-                our neighborhood. Annual dues: $300 (as of 2023).
+                our neighborhood. Annual dues: $300 (as of 2025).
               </p>
             </div>
           </div>

@@ -46,7 +46,7 @@ export default function Contact() {
                 <div>
                   <h3 className="text-[1.5rem] font-semibold mb-3 text-stone-900 leading-tight">HOA Dues</h3>
                   <p className="text-[1.125rem] text-stone-700 leading-relaxed">
-                    Annual dues: $300.00 (as of 2023)<br />
+                    Annual dues: $300.00 (as of 2025)<br />
                     <span className="text-sm text-stone-600">Subject to change</span>
                   </p>
                 </div>
