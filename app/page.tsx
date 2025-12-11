@@ -93,7 +93,9 @@ export default function Home() {
               <h3 className="text-[1.5rem] font-bold mb-4 text-stone-900 leading-tight">32 Beautiful Homes</h3>
               <p className="text-[1.125rem] text-stone-600 leading-relaxed">
                 Our neighborhood consists of 32 unique homes developed in the early to mid 1990s, 
-                each with mature trees and beautiful landscaping that create a picturesque setting.
+                each with mature trees and beautiful landscaping that create a picturesque setting. 
+                Larger-than-average lots provide extra breathing room, and covenants call for two-thirds to 
+                three-quarters brick exteriors—a standard only one home doesn't follow—keeping the streetscape cohesive.
               </p>
             </div>
             

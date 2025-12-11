@@ -17,12 +17,14 @@ export default function About() {
             <p className="text-[1.125rem] text-stone-700 mb-6 leading-relaxed">
               Ashford Hills is a residential neighborhood in Granger, Indiana, located near Ironwood and Adams Road. 
               It consists of 32 beautiful homes developed in the early to mid 1990s. Our neighborhood is part of the 
-              Knollwood Development on Adams Road and is one of Granger's popular neighborhoods.
+              Knollwood Development on Adams Road and is one of Granger's popular neighborhoods, with lot sizes that are 
+              noticeably larger than most surrounding subdivisions for added space and privacy.
             </p>
             <p className="text-[1.125rem] text-stone-700 mb-6 leading-relaxed">
               The homes in our neighborhood are each unique, boasting mature trees and foliage. The neighborhood is 
               governed by our covenants and restrictions in an effort to maintain the integrity of the neighborhood 
-              and keep Ashford Hills a highly desirable place to live.
+              and keep Ashford Hills a highly desirable place to live, including architectural guidelines that call for 
+              two-thirds to three-quarters brick exteriors—something all but one home proudly follows.
             </p>
             <p className="text-[1.125rem] text-stone-700 mb-12 leading-relaxed">
               Average home prices in Ashford Hills range from $400,000 to $600,000, reflecting the quality and 
