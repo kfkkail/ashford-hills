@@ -113,7 +113,7 @@ export default function Home() {
               <h3 className="text-[1.5rem] font-bold mb-4 text-stone-900 leading-tight">Active HOA</h3>
               <p className="text-[1.125rem] text-stone-600 leading-relaxed">
                 Our Homeowners Association works diligently to maintain the integrity and beauty of 
-                our neighborhood. Annual dues: $300 (as of 2025).
+                our neighborhood. Annual dues are $300.
               </p>
             </div>
           </div>
@@ -168,8 +168,7 @@ export default function Home() {
                   <div>
                     <h3 className="text-xl font-semibold mb-2 text-stone-900">Schools & Services</h3>
                     <ul className="space-y-2 text-[1.125rem] text-stone-600">
-                      <li>• South Bend Community School District</li>
-                      <li>• Swanson Elementary, Clay Middle & High</li>
+                      <li>• South Bend Community School Corporation (SBCSC)</li>
                       <li>• Well water & septic utilities</li>
                       <li>• Active HOA keeping properties pristine</li>
                     </ul>
@@ -209,7 +208,7 @@ export default function Home() {
                     </div>
                     <div className="flex justify-between">
                       <span className="text-stone-600">Schools:</span>
-                      <span className="font-semibold text-stone-900 text-right">Swanson (Elem)<br />Clay (Middle & High)</span>
+                      <span className="font-semibold text-stone-900 text-right">South Bend schools<br />(SBCSC)</span>
                     </div>
                   </div>
                 </div>
@@ -225,7 +224,7 @@ export default function Home() {
         <div className="container mx-auto px-4 lg:px-8 text-center relative z-10">
           <h2 className="text-[2.25rem] md:text-[3rem] font-bold mb-4 leading-tight">Have Questions?</h2>
           <p className="text-xl md:text-2xl mb-10 text-gray-100 max-w-2xl mx-auto leading-relaxed">
-            Get in touch with the Ashford Hills HOA. We're here to help maintain our wonderful community.
+            Get in touch with the Ashford Hills HOA. We&apos;re here to help maintain our wonderful community.
           </p>
           <Link
             href="/contact"
