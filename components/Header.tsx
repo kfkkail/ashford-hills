@@ -22,9 +22,12 @@ export default function Header() {
               </Link>
             </li>
             <li>
-              <Link href="/contact" className="text-stone-700 hover:text-teal-600 font-medium transition-colors">
+              <a
+                href="mailto:info@ashfordhills.org"
+                className="text-stone-700 hover:text-teal-600 font-medium transition-colors"
+              >
                 Contact
-              </Link>
+              </a>
             </li>
           </ul>
 
@@ -58,13 +61,13 @@ export default function Header() {
                 </Link>
               </li>
               <li>
-                <Link 
-                  href="/contact" 
+                <a
+                  href="mailto:info@ashfordhills.org"
                   className="block text-stone-700 hover:text-teal-600 font-medium transition-colors"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   Contact
-                </Link>
+                </a>
               </li>
             </ul>
           </div>

@@ -5,7 +5,6 @@ A modern, responsive website for the Ashford Hills Homeowners Association in Gra
 ## Features
 
 - **Home Page**: Hero image, quick stats (homes, annual HOA dues, established), neighborhood highlights, and a contact call-to-action
-- **Contact Page**: Contact form and HOA contact/dues information
 - **Responsive Design**: Mobile-first approach with responsive navigation
 - **Modern UI**: Clean, professional design inspired by Knollwood West HOA
 
@@ -40,15 +39,12 @@ npm run dev
 ```
 ashford-hills/
 ├── app/
-│   ├── contact/
-│   │   └── page.tsx           # Contact page
 │   ├── layout.tsx             # Root layout with Header/Footer
 │   ├── page.tsx               # Home page
 │   └── globals.css            # Global styles
 ├── components/
 │   ├── Header.tsx             # Navigation header
 │   ├── Footer.tsx              # Footer component
-│   └── ContactForm.tsx         # Contact form component
 ├── public/                     # Static assets
 └── package.json
 ```
@@ -139,17 +135,12 @@ This project uses:
 To update content on the site:
 
 - **Home page**: Edit `app/page.tsx`
-- **Contact page**: Edit `app/contact/page.tsx`
 - **Navigation**: Edit `components/Header.tsx`
 - **Footer**: Edit `components/Footer.tsx`
 
-## Contact Form
+## Contact
 
-The contact form on the Contact page currently logs submissions to the console. To make it functional:
-
-1. Set up an API route in `app/api/contact/route.ts`
-2. Integrate with an email service (SendGrid, Resend, etc.) or form service (Formspree, etc.)
-3. Update `components/ContactForm.tsx` to submit to the API endpoint
+The site uses a simple email link (`mailto:info@ashfordhills.org`) instead of a contact page/form.
 
 ## License
 
