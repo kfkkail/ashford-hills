@@ -1,5 +1,9 @@
-import Link from 'next/link';
 import Image from 'next/image';
+
+const CONTACT_EMAIL = 'info@ashfordhills.org';
+const mailtoHref = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(
+  'Ashford Hills HOA Inquiry'
+)}&body=${encodeURIComponent('Hi Ashford Hills HOA,\n\n')}`;
 
 export default function Home() {
   return (
@@ -31,15 +35,15 @@ export default function Home() {
               A beautiful residential neighborhood in Granger, Indiana where community and excellence meet
             </p>
             <div className="flex flex-col sm:flex-row gap-4 pb-6 sm:pb-0">
-              <Link
-                href="/contact"
+              <a
+                href={mailtoHref}
                 className="inline-flex items-center justify-center px-8 py-4 bg-teal-600 hover:bg-teal-700 text-white font-semibold rounded-lg transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:-translate-y-1"
               >
                 Contact Us
                 <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                 </svg>
-              </Link>
+              </a>
             </div>
           </div>
         </div>
@@ -226,15 +230,15 @@ export default function Home() {
           <p className="text-xl md:text-2xl mb-10 text-gray-100 max-w-2xl mx-auto leading-relaxed">
             Get in touch with the Ashford Hills HOA. We&apos;re here to help maintain our wonderful community.
           </p>
-          <Link
-            href="/contact"
+          <a
+            href={mailtoHref}
             className="inline-flex items-center justify-center px-10 py-5 bg-white text-teal-600 font-semibold rounded-lg hover:bg-gray-100 transition-all duration-300 shadow-2xl hover:shadow-3xl transform hover:-translate-y-1 text-lg"
           >
             Contact Us Today
             <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
             </svg>
-          </Link>
+          </a>
         </div>
       </section>
     </div>
