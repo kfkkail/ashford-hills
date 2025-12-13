@@ -169,7 +169,6 @@ export default function Home() {
                     <h3 className="text-xl font-semibold mb-2 text-stone-900">Schools & Services</h3>
                     <ul className="space-y-2 text-[1.125rem] text-stone-600">
                       <li>• South Bend Community School Corporation (SBCSC)</li>
-                      <li>• School assignments may vary due to magnet/choice programs</li>
                       <li>• Well water & septic utilities</li>
                       <li>• Active HOA keeping properties pristine</li>
                     </ul>
