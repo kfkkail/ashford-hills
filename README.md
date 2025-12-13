@@ -4,9 +4,8 @@ A modern, responsive website for the Ashford Hills Homeowners Association in Gra
 
 ## Features
 
-- **Home Page**: Hero section with neighborhood highlights and quick information
-- **About Page**: Detailed information about the neighborhood, location, schools, and amenities
-- **Contact Page**: Contact form and HOA information
+- **Home Page**: Hero image, quick stats (homes, annual HOA dues, established), neighborhood highlights, and a contact call-to-action
+- **Contact Page**: Contact form and HOA contact/dues information
 - **Responsive Design**: Mobile-first approach with responsive navigation
 - **Modern UI**: Clean, professional design inspired by Knollwood West HOA
 
@@ -41,8 +40,6 @@ npm run dev
 ```
 ashford-hills/
 ├── app/
-│   ├── about/
-│   │   └── page.tsx          # About page
 │   ├── contact/
 │   │   └── page.tsx           # Contact page
 │   ├── layout.tsx             # Root layout with Header/Footer
@@ -142,7 +139,6 @@ This project uses:
 To update content on the site:
 
 - **Home page**: Edit `app/page.tsx`
-- **About page**: Edit `app/about/page.tsx`
 - **Contact page**: Edit `app/contact/page.tsx`
 - **Navigation**: Edit `components/Header.tsx`
 - **Footer**: Edit `components/Footer.tsx`

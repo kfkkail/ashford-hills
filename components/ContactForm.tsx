@@ -72,7 +72,7 @@ export default function ContactForm() {
       </div>
       {submitted && (
         <div className="bg-emerald-50 border border-emerald-400 text-emerald-700 px-4 py-3 rounded-lg">
-          Thank you for your message! We'll get back to you soon.
+          Thank you for your message! We&apos;ll get back to you soon.
         </div>
       )}
       <button

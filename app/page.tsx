@@ -113,7 +113,7 @@ export default function Home() {
               <h3 className="text-[1.5rem] font-bold mb-4 text-stone-900 leading-tight">Active HOA</h3>
               <p className="text-[1.125rem] text-stone-600 leading-relaxed">
                 Our Homeowners Association works diligently to maintain the integrity and beauty of 
-                our neighborhood. Annual dues are $300 per year.
+                our neighborhood. Annual dues are $300.
               </p>
             </div>
           </div>
@@ -225,7 +225,7 @@ export default function Home() {
         <div className="container mx-auto px-4 lg:px-8 text-center relative z-10">
           <h2 className="text-[2.25rem] md:text-[3rem] font-bold mb-4 leading-tight">Have Questions?</h2>
           <p className="text-xl md:text-2xl mb-10 text-gray-100 max-w-2xl mx-auto leading-relaxed">
-            Get in touch with the Ashford Hills HOA. We're here to help maintain our wonderful community.
+            Get in touch with the Ashford Hills HOA. We&apos;re here to help maintain our wonderful community.
           </p>
           <Link
             href="/contact"
