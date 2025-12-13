@@ -168,8 +168,8 @@ export default function Home() {
                   <div>
                     <h3 className="text-xl font-semibold mb-2 text-stone-900">Schools & Services</h3>
                     <ul className="space-y-2 text-[1.125rem] text-stone-600">
-                      <li>• South Bend Community School District</li>
-                      <li>• Swanson Elementary, Clay Middle & High</li>
+                      <li>• South Bend Community School Corporation (SBCSC)</li>
+                      <li>• School assignments may vary due to magnet/choice programs</li>
                       <li>• Well water & septic utilities</li>
                       <li>• Active HOA keeping properties pristine</li>
                     </ul>
@@ -209,7 +209,7 @@ export default function Home() {
                     </div>
                     <div className="flex justify-between">
                       <span className="text-stone-600">Schools:</span>
-                      <span className="font-semibold text-stone-900 text-right">Swanson (Elem)<br />Clay (Middle & High)</span>
+                      <span className="font-semibold text-stone-900 text-right">South Bend schools<br />(SBCSC)</span>
                     </div>
                   </div>
                 </div>
