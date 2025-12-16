@@ -76,7 +76,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased flex flex-col min-h-screen`}
       >
         <Header />
-        <main id="main-content" className="flex-grow">
+        <main id="main-content" className="scroll-target flex-grow">
           {children}
         </main>
         <Footer />

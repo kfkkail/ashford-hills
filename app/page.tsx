@@ -97,7 +97,7 @@ export default function Home() {
       </section>
 
       {/* Quick Stats Bar - NEW */}
-      <section id="hoa" className="py-12 bg-stone-50 border-b border-stone-200">
+      <section id="hoa" className="scroll-target py-12 bg-stone-50 border-b border-stone-200">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="text-center mb-8">
             <h2 className="text-3xl md:text-4xl font-bold text-stone-900">
@@ -183,7 +183,7 @@ export default function Home() {
       </section>
 
       {/* Split Content Section - Benefits */}
-      <section id="location" className="py-24 bg-gradient-to-br from-stone-50 to-teal-50/30">
+      <section id="location" className="scroll-target py-24 bg-gradient-to-br from-stone-50 to-teal-50/30">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
             {/* Left: Text Content */}

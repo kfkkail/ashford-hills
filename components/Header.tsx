@@ -1,13 +1,34 @@
 'use client';
 
 import Link from 'next/link';
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const headerRef = useRef<HTMLElement | null>(null);
+
+  useEffect(() => {
+    const el = headerRef.current;
+    if (!el) return;
+
+    const setVar = () => {
+      const height = el.getBoundingClientRect().height;
+      document.documentElement.style.setProperty('--header-height', `${Math.ceil(height)}px`);
+    };
+
+    setVar();
+    const ro = new ResizeObserver(() => setVar());
+    ro.observe(el);
+    window.addEventListener('resize', setVar);
+
+    return () => {
+      ro.disconnect();
+      window.removeEventListener('resize', setVar);
+    };
+  }, []);
 
   return (
-    <header className="bg-white shadow-sm sticky top-0 z-50">
+    <header ref={headerRef} className="bg-white shadow-sm sticky top-0 z-50">
       <nav className="container mx-auto px-4 py-4">
         <a
           href="#main-content"
