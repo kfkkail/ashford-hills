@@ -9,6 +9,12 @@ export default function Header() {
   return (
     <header className="bg-white shadow-sm sticky top-0 z-50">
       <nav className="container mx-auto px-4 py-4">
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:rounded-lg focus:bg-white focus:px-4 focus:py-2 focus:text-stone-900 focus:shadow-lg"
+        >
+          Skip to content
+        </a>
         <div className="flex items-center justify-between">
           <Link href="/" className="text-2xl font-bold text-teal-600 hover:text-teal-700 transition-colors">
             Ashford Hills
@@ -19,6 +25,16 @@ export default function Header() {
             <li>
               <Link href="/" className="text-stone-700 hover:text-teal-600 font-medium transition-colors">
                 Home
+              </Link>
+            </li>
+            <li>
+              <Link href="/#hoa" className="text-stone-700 hover:text-teal-600 font-medium transition-colors">
+                HOA Info
+              </Link>
+            </li>
+            <li>
+              <Link href="/#location" className="text-stone-700 hover:text-teal-600 font-medium transition-colors">
+                Location
               </Link>
             </li>
             <li>
@@ -58,6 +74,24 @@ export default function Header() {
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   Home
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/#hoa"
+                  className="block text-stone-700 hover:text-teal-600 font-medium transition-colors"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  HOA Info
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/#location"
+                  className="block text-stone-700 hover:text-teal-600 font-medium transition-colors"
+                  onClick={() => setMobileMenuOpen(false)}
+                >
+                  Location
                 </Link>
               </li>
               <li>
