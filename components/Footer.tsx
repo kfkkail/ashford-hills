@@ -10,7 +10,7 @@ export default function Footer() {
           <div>
             <h4 className="font-semibold mb-4 text-stone-200">Contact Information</h4>
             <p className="text-stone-400">
-              Email: <a href="mailto:info@ashfordhills.org" className="text-teal-400 hover:text-teal-300 transition-colors">info@ashfordhills.org</a>
+              Email: <a href="mailto:info@ashfordhillsgranger.org" className="text-teal-400 hover:text-teal-300 transition-colors">info@ashfordhillsgranger.org</a>
             </p>
           </div>
           <div>
