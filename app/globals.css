@@ -3,6 +3,8 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+  --header-height: 80px;
+  --scroll-offset: calc(var(--header-height) + 16px);
 }
 
 @theme inline {
@@ -21,4 +23,10 @@ body {
 /* Smooth scrolling */
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: var(--scroll-offset);
+}
+
+/* Ensure anchor targets land below sticky header */
+.scroll-target {
+  scroll-margin-top: var(--scroll-offset);
 }
