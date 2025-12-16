@@ -97,14 +97,14 @@ Currently, no environment variables are required. If you add features like email
 
 ```bash
 # Example (not currently used)
-# NEXT_PUBLIC_SITE_URL=https://ashfordhills.org
-# CONTACT_EMAIL=info@ashfordhills.org
+# NEXT_PUBLIC_SITE_URL=https://ashfordhillsgranger.org
+# CONTACT_EMAIL=info@ashfordhillsgranger.org
 ```
 
 ### Custom Domain
 
 1. In your Vercel project settings, go to "Domains"
-2. Add your custom domain (e.g., `ashfordhills.org`)
+2. Add your custom domain (e.g., `ashfordhillsgranger.org`)
 3. Follow Vercel's instructions to configure DNS records
 
 ## Development
@@ -140,7 +140,7 @@ To update content on the site:
 
 ## Contact
 
-The site uses a simple email link (`mailto:info@ashfordhills.org`) instead of a contact page/form.
+The site uses a simple email link (`mailto:info@ashfordhillsgranger.org`) instead of a contact page/form.
 
 ## License
 

@@ -1,6 +1,6 @@
 import Image from 'next/image';
 
-const CONTACT_EMAIL = 'info@ashfordhills.org';
+const CONTACT_EMAIL = 'info@ashfordhillsgranger.org';
 const mailtoHref = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(
   'Ashford Hills HOA Inquiry'
 )}&body=${encodeURIComponent('Hi Ashford Hills HOA,\n\n')}`;

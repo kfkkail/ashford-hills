@@ -23,7 +23,7 @@ export default function Header() {
             </li>
             <li>
               <a
-                href="mailto:info@ashfordhills.org"
+                href="mailto:info@ashfordhillsgranger.org"
                 className="text-stone-700 hover:text-teal-600 font-medium transition-colors"
               >
                 Contact
@@ -62,7 +62,7 @@ export default function Header() {
               </li>
               <li>
                 <a
-                  href="mailto:info@ashfordhills.org"
+                  href="mailto:info@ashfordhillsgranger.org"
                   className="block text-stone-700 hover:text-teal-600 font-medium transition-colors"
                   onClick={() => setMobileMenuOpen(false)}
                 >
