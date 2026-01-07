@@ -5,10 +5,15 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
-const siteUrl =
-  process.env.NEXT_PUBLIC_SITE_URL ?? process.env.VERCEL_URL
-    ? `https://${process.env.VERCEL_URL}`
-    : "http://localhost:3000";
+const SITE_URL =
+  process.env.NEXT_PUBLIC_SITE_URL ??
+  (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : "https://ashfordhillsgranger.org");
+
+const SITE_NAME = "Ashford Hills Homeowners Association";
+const SITE_SHORT_NAME = "Ashford Hills HOA";
+const DEFAULT_TITLE = "Ashford Hills HOA | Granger, Indiana";
+const DEFAULT_DESCRIPTION =
+  "Official website of the Ashford Hills Homeowners Association (HOA) in Granger, Indiana. Get community information, HOA contact details, dues info, and neighborhood resources.";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -21,32 +26,43 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL(siteUrl),
-  title: "Ashford Hills",
-  description:
-    "Welcome to Ashford Hills, a beautiful residential neighborhood. Homeowners Association information and community resources.",
+  metadataBase: new URL(SITE_URL),
+  title: {
+    default: DEFAULT_TITLE,
+    template: `%s | ${SITE_SHORT_NAME}`,
+  },
+  applicationName: SITE_SHORT_NAME,
+  description: DEFAULT_DESCRIPTION,
+  category: "homeowners association",
+  alternates: {
+    canonical: "/",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+      "max-video-preview": -1,
+    },
+  },
+  icons: {
+    icon: [{ url: "/favicon.ico" }],
+  },
   openGraph: {
-    title: "Ashford Hills",
-    siteName: "Ashford Hills",
-    description:
-      "Welcome to Ashford Hills, a beautiful residential neighborhood. Homeowners Association information and community resources.",
+    title: DEFAULT_TITLE,
+    siteName: SITE_NAME,
+    description: DEFAULT_DESCRIPTION,
     type: "website",
     url: "/",
-    images: [
-      {
-        url: "/hero.png",
-        width: 1200,
-        height: 630,
-        alt: "Ashford Hills",
-      },
-    ],
+    locale: "en_US",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Ashford Hills",
-    description:
-      "Welcome to Ashford Hills, a beautiful residential neighborhood. Homeowners Association information and community resources.",
-    images: ["/hero.png"],
+    title: DEFAULT_TITLE,
+    description: DEFAULT_DESCRIPTION,
   },
 };
 
@@ -79,7 +95,7 @@ export default function RootLayout({
           </>
         )}
         <Header />
-        <main className="flex-grow">
+        <main id="main-content" className="scroll-target flex-grow">
           {children}
         </main>
         <Footer />

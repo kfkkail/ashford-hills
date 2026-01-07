@@ -5,9 +5,56 @@ const mailtoHref = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(
   'Ashford Hills HOA Inquiry'
 )}&body=${encodeURIComponent('Hi Ashford Hills HOA,\n\n')}`;
 
+const SITE_URL =
+  process.env.NEXT_PUBLIC_SITE_URL ??
+  (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : 'https://ashfordhillsgranger.org');
+
 export default function Home() {
+  const organizationJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: 'Ashford Hills Homeowners Association',
+    alternateName: 'Ashford Hills HOA',
+    url: SITE_URL,
+    email: CONTACT_EMAIL,
+    description:
+      'Official website of the Ashford Hills Homeowners Association (HOA) in Granger, Indiana. Community information, HOA contact details, dues info, and neighborhood resources.',
+    areaServed: {
+      '@type': 'City',
+      name: 'Granger',
+      address: {
+        '@type': 'PostalAddress',
+        addressLocality: 'Granger',
+        addressRegion: 'IN',
+        addressCountry: 'US',
+      },
+    },
+  };
+
+  const websiteJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: 'Ashford Hills HOA',
+    url: SITE_URL,
+    inLanguage: 'en-US',
+    publisher: {
+      '@type': 'Organization',
+      name: 'Ashford Hills Homeowners Association',
+      url: SITE_URL,
+    },
+  };
+
   return (
     <div className="bg-white">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
+      />
+
       {/* Hero Section - Redesigned */}
       <section className="relative min-h-[600px] sm:min-h-[70vh] lg:min-h-[80vh] overflow-hidden">
         {/* Background Image */}
@@ -28,11 +75,11 @@ export default function Home() {
         {/* Hero Content - Left Aligned */}
         <div className="relative z-10 container mx-auto px-4 lg:px-8 h-full flex flex-col justify-start md:justify-center text-white py-16">
           <div className="max-w-full sm:max-w-[80%] md:max-w-[60%] lg:max-w-[45%]">
-            <h1 className="text-[clamp(1.65rem,7vw,3.25rem)] sm:text-[clamp(2.25rem,6vw,4rem)] md:text-[clamp(3rem,5vw,5rem)] lg:text-[5.5rem] font-bold mb-6 leading-tight tracking-tight drop-shadow-2xl whitespace-nowrap">
-              Discover Ashford Hills
+            <h1 className="text-[clamp(1.65rem,7vw,3.25rem)] sm:text-[clamp(2.25rem,6vw,4rem)] md:text-[clamp(3rem,5vw,5rem)] lg:text-[5.5rem] font-bold mb-6 leading-tight tracking-tight drop-shadow-2xl">
+              Ashford Hills HOA
             </h1>
             <p className="text-xl md:text-2xl mb-10 drop-shadow-lg leading-relaxed text-gray-100">
-              A beautiful residential neighborhood in Granger, Indiana where community and excellence meet
+              The official site for the Ashford Hills Homeowners Association in Granger, Indiana—community information, HOA contacts, and neighborhood resources.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 pb-6 sm:pb-0">
               <a
@@ -50,8 +97,16 @@ export default function Home() {
       </section>
 
       {/* Quick Stats Bar - NEW */}
-      <section className="py-12 bg-stone-50 border-b border-stone-200">
+      <section id="hoa" className="scroll-target py-12 bg-stone-50 border-b border-stone-200">
         <div className="container mx-auto px-4 lg:px-8">
+          <div className="text-center mb-8">
+            <h2 className="text-3xl md:text-4xl font-bold text-stone-900">
+              HOA information at a glance
+            </h2>
+            <p className="mt-3 text-lg text-stone-600 max-w-3xl mx-auto">
+              This site provides official HOA contact information and neighborhood details for residents, prospective homeowners, and real estate professionals.
+            </p>
+          </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             <div className="text-center">
               <div className="text-5xl md:text-6xl font-bold text-teal-600 mb-2">32</div>
@@ -66,6 +121,9 @@ export default function Home() {
               <div className="text-lg text-stone-700 font-medium">Established</div>
             </div>
           </div>
+          <p className="mt-6 text-center text-sm text-stone-500">
+            Figures shown are community highlights and may change over time.
+          </p>
         </div>
       </section>
 
@@ -125,7 +183,7 @@ export default function Home() {
       </section>
 
       {/* Split Content Section - Benefits */}
-      <section className="py-24 bg-gradient-to-br from-stone-50 to-teal-50/30">
+      <section id="location" className="scroll-target py-24 bg-gradient-to-br from-stone-50 to-teal-50/30">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
             {/* Left: Text Content */}
@@ -216,6 +274,41 @@ export default function Home() {
                     </div>
                   </div>
                 </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* HOA Resources - SEO-focused content */}
+      <section className="py-24 bg-white">
+        <div className="container mx-auto px-4 lg:px-8">
+          <div className="max-w-5xl mx-auto">
+            <h2 className="text-[2.25rem] md:text-[3rem] font-bold mb-4 text-stone-900 leading-tight">
+              Ashford Hills HOA resources
+            </h2>
+            <p className="text-xl text-stone-600 leading-relaxed mb-10">
+              Looking for HOA information for Ashford Hills in Granger, Indiana? Use the contact link below for questions about dues, covenants and restrictions, architectural guidelines, and community updates.
+            </p>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div className="p-8 rounded-2xl bg-stone-50 border border-stone-200">
+                <h3 className="text-xl font-bold text-stone-900 mb-3">Residents</h3>
+                <ul className="space-y-2 text-stone-600">
+                  <li>• HOA dues questions and payment guidance</li>
+                  <li>• Covenant and restriction questions</li>
+                  <li>• Exterior modification requests and approvals</li>
+                  <li>• Neighborhood updates and community communications</li>
+                </ul>
+              </div>
+              <div className="p-8 rounded-2xl bg-stone-50 border border-stone-200">
+                <h3 className="text-xl font-bold text-stone-900 mb-3">Prospective homeowners & realtors</h3>
+                <ul className="space-y-2 text-stone-600">
+                  <li>• HOA contact for resale disclosures</li>
+                  <li>• Dues verification (amounts may change)</li>
+                  <li>• General neighborhood information</li>
+                  <li>• Document requests as needed</li>
+                </ul>
               </div>
             </div>
           </div>
