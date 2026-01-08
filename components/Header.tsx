@@ -25,14 +25,14 @@ export default function Header() {
           {/* Desktop Menu */}
           <ul className="hidden md:flex space-x-6">
             <li>
-              <Link href="/" className="text-stone-700 hover:text-teal-600 font-medium transition-colors">
+              <Link href="/" className="text-stone-700 hover:text-green-600 font-medium transition-colors">
                 Home
               </Link>
             </li>
             <li>
               <a
                 href="mailto:info@ashfordhillsgranger.org"
-                className="text-stone-700 hover:text-teal-600 font-medium transition-colors"
+                className="text-stone-700 hover:text-green-600 font-medium transition-colors"
               >
                 Contact
               </a>
@@ -41,7 +41,7 @@ export default function Header() {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden text-stone-700 hover:text-teal-600 focus:outline-none transition-colors"
+            className="md:hidden text-stone-700 hover:text-green-600 focus:outline-none transition-colors"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label="Toggle menu"
           >
@@ -62,7 +62,7 @@ export default function Header() {
               <li>
                 <Link 
                   href="/" 
-                  className="block text-stone-700 hover:text-teal-600 font-medium transition-colors"
+                  className="block text-stone-700 hover:text-green-600 font-medium transition-colors"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   Home
@@ -71,7 +71,7 @@ export default function Header() {
               <li>
                 <a
                   href="mailto:info@ashfordhillsgranger.org"
-                  className="block text-stone-700 hover:text-teal-600 font-medium transition-colors"
+                  className="block text-stone-700 hover:text-green-600 font-medium transition-colors"
                   onClick={() => setMobileMenuOpen(false)}
                 >
                   Contact

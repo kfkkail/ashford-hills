@@ -11,6 +11,17 @@
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
   --font-serif: var(--font-playfair);
+  /* Custom green color scale using #5c8e46 (logo green) */
+  --color-green-50: #f2f7f0;
+  --color-green-100: #e5efe1;
+  --color-green-200: #cbdfc3;
+  --color-green-300: #b1cfa5;
+  --color-green-400: #97bf87;
+  --color-green-500: #7daf69;
+  --color-green-600: #5c8e46;
+  --color-green-700: #456b35;
+  --color-green-800: #2e4824;
+  --color-green-900: #172512;
 }
 
 body {
