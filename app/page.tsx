@@ -5,9 +5,57 @@ const mailtoHref = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(
   'Ashford Hills HOA Inquiry'
 )}&body=${encodeURIComponent('Hi Ashford Hills HOA,\n\n')}`;
 
+const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 
+  (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : 'https://ashfordhillsgranger.org');
+
+// Structured data for SEO
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Ashford Hills Homeowners Association",
+  "alternateName": "Ashford Hills",
+  "url": baseUrl,
+  "email": CONTACT_EMAIL,
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Granger",
+    "addressRegion": "IN",
+    "addressCountry": "US"
+  },
+  "areaServed": {
+    "@type": "City",
+    "name": "Granger, Indiana"
+  }
+};
+
+const neighborhoodSchema = {
+  "@context": "https://schema.org",
+  "@type": "Residence",
+  "name": "Ashford Hills",
+  "description": "A residential neighborhood in Granger, Indiana with 32 custom homes established in the 1990s",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Granger",
+    "addressRegion": "IN",
+    "addressCountry": "US",
+    "streetAddress": "Near Ironwood and Adams Road"
+  },
+  "numberOfBedrooms": "3-4",
+  "numberOfBathroomsTotal": "2-3"
+};
+
 export default function Home() {
   return (
     <div className="bg-white">
+      {/* Structured Data for SEO */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(neighborhoodSchema) }}
+      />
       {/* Hero Section - Redesigned */}
       <section className="relative min-h-[600px] sm:min-h-[70vh] lg:min-h-[80vh] overflow-hidden">
         {/* Background Image */}
