@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { useState } from 'react';
 
 export default function Header() {
@@ -10,8 +11,15 @@ export default function Header() {
     <header className="bg-white shadow-sm sticky top-0 z-50">
       <nav className="container mx-auto px-4 py-4">
         <div className="flex items-center justify-between">
-          <Link href="/" className="text-2xl font-bold text-teal-600 hover:text-teal-700 transition-colors">
-            Ashford Hills
+          <Link href="/" className="flex items-center hover:opacity-90 transition-opacity">
+            <Image
+              src="/ashford-hills-logo3.png"
+              alt="Ashford Hills"
+              width={200}
+              height={60}
+              className="h-10 w-auto"
+              priority
+            />
           </Link>
           
           {/* Desktop Menu */}
