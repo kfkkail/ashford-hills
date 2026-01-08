@@ -5,10 +5,8 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
-const siteUrl =
-  process.env.NEXT_PUBLIC_SITE_URL ?? process.env.VERCEL_URL
-    ? `https://${process.env.VERCEL_URL}`
-    : "http://localhost:3000";
+const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 
+  (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : 'https://ashfordhillsgranger.org');
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -27,32 +25,48 @@ const playfairDisplay = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL(siteUrl),
-  title: "Ashford Hills",
+  metadataBase: new URL(baseUrl),
+  title: "Ashford Hills | Granger, Indiana | Homeowners Association",
   description:
-    "Welcome to Ashford Hills, a beautiful residential neighborhood. Homeowners Association information and community resources.",
+    "Ashford Hills is a beautiful residential neighborhood in Granger, Indiana. 32 custom homes, established in the 1990s, with active HOA management. Located near Notre Dame, Knollwood Country Club, and excellent schools.",
+  keywords: [
+    "Ashford Hills",
+    "Granger Indiana",
+    "HOA",
+    "Homeowners Association",
+    "Granger neighborhoods",
+    "Notre Dame area",
+    "Knollwood community",
+    "residential neighborhood",
+    "South Bend area homes",
+  ],
+  authors: [{ name: "Ashford Hills HOA" }],
   openGraph: {
-    title: "Ashford Hills",
+    title: "Ashford Hills HOA | Granger, Indiana",
     siteName: "Ashford Hills",
     description:
-      "Welcome to Ashford Hills, a beautiful residential neighborhood. Homeowners Association information and community resources.",
+      "A beautiful residential neighborhood in Granger, Indiana with 32 custom homes, active HOA, and prime location near Notre Dame.",
     type: "website",
-    url: "/",
+    url: baseUrl,
+    locale: "en_US",
     images: [
       {
-        url: "/hero.png",
+        url: `${baseUrl}/hero.png`,
         width: 1200,
         height: 630,
-        alt: "Ashford Hills",
+        alt: "Ashford Hills neighborhood in Granger, Indiana",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Ashford Hills",
+    title: "Ashford Hills HOA | Granger, Indiana",
     description:
-      "Welcome to Ashford Hills, a beautiful residential neighborhood. Homeowners Association information and community resources.",
-    images: ["/hero.png"],
+      "A beautiful residential neighborhood in Granger, Indiana with 32 custom homes and active HOA management.",
+    images: [`${baseUrl}/hero.png`],
+  },
+  alternates: {
+    canonical: baseUrl,
   },
 };
 

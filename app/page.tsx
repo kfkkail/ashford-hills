@@ -5,9 +5,57 @@ const mailtoHref = `mailto:${CONTACT_EMAIL}?subject=${encodeURIComponent(
   'Ashford Hills HOA Inquiry'
 )}&body=${encodeURIComponent('Hi Ashford Hills HOA,\n\n')}`;
 
+const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 
+  (process.env.VERCEL_URL ? `https://${process.env.VERCEL_URL}` : 'https://ashfordhillsgranger.org');
+
+// Structured data for SEO
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "Ashford Hills Homeowners Association",
+  "alternateName": "Ashford Hills",
+  "url": baseUrl,
+  "email": CONTACT_EMAIL,
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Granger",
+    "addressRegion": "IN",
+    "addressCountry": "US"
+  },
+  "areaServed": {
+    "@type": "City",
+    "name": "Granger, Indiana"
+  }
+};
+
+const neighborhoodSchema = {
+  "@context": "https://schema.org",
+  "@type": "Residence",
+  "name": "Ashford Hills",
+  "description": "A residential neighborhood in Granger, Indiana with 32 custom homes established in the 1990s",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Granger",
+    "addressRegion": "IN",
+    "addressCountry": "US",
+    "streetAddress": "Near Ironwood and Adams Road"
+  },
+  "numberOfBedrooms": "3-4",
+  "numberOfBathroomsTotal": "2-3"
+};
+
 export default function Home() {
   return (
     <div className="bg-white">
+      {/* Structured Data for SEO */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(neighborhoodSchema) }}
+      />
       {/* Hero Section - Redesigned */}
       <section className="relative min-h-[600px] sm:min-h-[70vh] lg:min-h-[80vh] overflow-hidden">
         {/* Background Image */}
@@ -21,7 +69,7 @@ export default function Home() {
             sizes="100vw"
           />
           {/* Enhanced Gradient Overlay */}
-          <div className="absolute inset-0 bg-gradient-to-br from-slate-900/80 via-teal-900/60 to-emerald-900/70"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-slate-900/80 via-green-900/60 to-emerald-900/70"></div>
           <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
         </div>
         
@@ -37,7 +85,7 @@ export default function Home() {
             <div className="flex flex-col sm:flex-row gap-4 pb-6 sm:pb-0">
               <a
                 href={mailtoHref}
-                className="inline-flex items-center justify-center px-8 py-4 bg-teal-600 hover:bg-teal-700 text-white font-semibold rounded-lg transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:-translate-y-1"
+                className="inline-flex items-center justify-center px-8 py-4 bg-green-600 hover:bg-green-700 text-white font-semibold rounded-lg transition-all duration-300 shadow-xl hover:shadow-2xl transform hover:-translate-y-1"
               >
                 Contact Us
                 <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -54,15 +102,15 @@ export default function Home() {
         <div className="container mx-auto px-4 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             <div className="text-center">
-              <div className="text-5xl md:text-6xl font-bold text-teal-600 mb-2">32</div>
+              <div className="text-5xl md:text-6xl font-bold text-green-600 mb-2">32</div>
               <div className="text-lg text-stone-700 font-medium">Beautiful Homes</div>
             </div>
             <div className="text-center">
-              <div className="text-5xl md:text-6xl font-bold text-teal-600 mb-2">$300</div>
+              <div className="text-5xl md:text-6xl font-bold text-green-600 mb-2">$300</div>
               <div className="text-lg text-stone-700 font-medium">Annual HOA Dues</div>
             </div>
             <div className="text-center">
-              <div className="text-5xl md:text-6xl font-bold text-teal-600 mb-2">1990s</div>
+              <div className="text-5xl md:text-6xl font-bold text-green-600 mb-2">1990s</div>
               <div className="text-lg text-stone-700 font-medium">Established</div>
             </div>
           </div>
@@ -74,7 +122,7 @@ export default function Home() {
         <div className="container mx-auto px-4 lg:px-8">
           <div className="text-center mb-16">
             <h2 className="text-[2.25rem] md:text-[3rem] font-bold mb-4 text-stone-900 leading-tight">
-              Why Choose <span className="text-teal-600">Ashford Hills</span>?
+              Why Choose <span className="text-green-600">Ashford Hills</span>?
             </h2>
             <p className="text-xl text-stone-600 max-w-2xl mx-auto leading-relaxed">
               Part of the Knollwood community in Granger, Ashford Hills pairs quiet streets with easy access to everything nearby.
@@ -83,7 +131,7 @@ export default function Home() {
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="group p-8 rounded-2xl bg-stone-50 border border-stone-200 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
-              <div className="w-14 h-14 bg-gradient-to-br from-teal-500 to-emerald-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+              <div className="w-14 h-14 bg-gradient-to-br from-green-500 to-emerald-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                 <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
                 </svg>
@@ -109,7 +157,7 @@ export default function Home() {
             </div>
             
             <div className="group p-8 rounded-2xl bg-stone-50 border border-stone-200 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
-              <div className="w-14 h-14 bg-gradient-to-br from-emerald-500 to-teal-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
+              <div className="w-14 h-14 bg-gradient-to-br from-emerald-500 to-green-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform">
                 <svg className="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                 </svg>
@@ -125,13 +173,13 @@ export default function Home() {
       </section>
 
       {/* Split Content Section - Benefits */}
-      <section className="py-24 bg-gradient-to-br from-stone-50 to-teal-50/30">
+      <section className="py-24 bg-gradient-to-br from-stone-50 to-green-50/30">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
             {/* Left: Text Content */}
             <div>
               <h2 className="text-[2.25rem] md:text-[3rem] font-bold mb-6 text-stone-900 leading-tight">
-                Neighborhood <span className="text-teal-600">Highlights</span>
+                Neighborhood <span className="text-green-600">Highlights</span>
               </h2>
               <p className="text-[1.125rem] text-stone-600 mb-8 leading-relaxed">
                 Everything you need for a wonderful lifestyle is right here in Ashford Hills, from Notre Dame game days to quiet cul-de-sacs. We’re minutes from Mishawaka, South Bend, and the Michigan border while still feeling tucked away.
@@ -152,7 +200,7 @@ export default function Home() {
                   </div>
                 </div>
                 <div className="flex items-start gap-4">
-                  <svg className="w-6 h-6 text-teal-500 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
+                  <svg className="w-6 h-6 text-green-500 mt-1 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20">
                     <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
                   </svg>
                   <div>
@@ -185,8 +233,8 @@ export default function Home() {
             <div className="bg-white p-10 rounded-2xl shadow-xl border border-stone-200">
               <div className="space-y-6">
                 <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 bg-teal-100 rounded-lg flex items-center justify-center">
-                    <svg className="w-6 h-6 text-teal-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center">
+                    <svg className="w-6 h-6 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                     </svg>
                   </div>
@@ -223,7 +271,7 @@ export default function Home() {
       </section>
 
       {/* Enhanced CTA Section */}
-      <section className="py-24 bg-gradient-to-br from-teal-600 via-emerald-600 to-teal-700 text-white relative overflow-hidden">
+      <section className="py-24 bg-gradient-to-br from-green-600 via-emerald-600 to-green-700 text-white relative overflow-hidden">
         <div className="absolute inset-0 bg-black/20"></div>
         <div className="container mx-auto px-4 lg:px-8 text-center relative z-10">
           <h2 className="text-[2.25rem] md:text-[3rem] font-bold mb-4 leading-tight">Have Questions?</h2>
@@ -232,7 +280,7 @@ export default function Home() {
           </p>
           <a
             href={mailtoHref}
-            className="inline-flex items-center justify-center px-10 py-5 bg-white text-teal-600 font-semibold rounded-lg hover:bg-gray-100 transition-all duration-300 shadow-2xl hover:shadow-3xl transform hover:-translate-y-1 text-lg"
+            className="inline-flex items-center justify-center px-10 py-5 bg-white text-green-600 font-semibold rounded-lg hover:bg-gray-100 transition-all duration-300 shadow-2xl hover:shadow-3xl transform hover:-translate-y-1 text-lg"
           >
             Contact Us Today
             <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
