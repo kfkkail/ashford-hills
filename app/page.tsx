@@ -61,12 +61,13 @@ export default function Home() {
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <Image
-            src="/hero.png"
+            src="/hero.webp"
             alt="Ashford Hills neighborhood with beautiful autumn foliage"
             fill
             className="object-cover"
             priority
-            sizes="100vw"
+            quality={85}
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 100vw"
           />
           {/* Enhanced Gradient Overlay */}
           <div className="absolute inset-0 bg-gradient-to-br from-slate-900/80 via-green-900/60 to-emerald-900/70"></div>
